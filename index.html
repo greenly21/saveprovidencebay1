@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天賦海灣1期 9.5 EGM | 請投【反對票】否決全部不合理方案</title>
+    <style>
+        :root {
+            --primary: #d9534f;
+            --primary-dark: #c9302c;
+            --secondary: #2a5298;
+            --dark: #222;
+            --light: #f8f9fa;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: var(--dark);
+            line-height: 1.6;
+            padding-bottom: 110px;
+        }
+        .header-banner {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 250px;
+        }
+        .header-text {
+            background: linear-gradient(135deg, #112d4e 0%, #3f72af 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #ffeb3b;
+        }
+        .header-text p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        .alert-banner {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 14px;
+            font-weight: bold;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+        }
+        .card h2 {
+            color: #112d4e;
+            border-bottom: 3px solid #3f72af;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #dee2e6;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .price-table th {
+            background-color: #f1f4f9;
+            color: #112d4e;
+        }
+        .highlight {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.05rem;
+        }
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .pain-card {
+            background-color: #fff4f4;
+            border: 1px solid #ffcdd2;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .pain-card h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .dark-box {
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 6px solid #d9534f;
+        }
+        .dark-box h2 {
+            color: #ffeb3b;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .btn-link-out {
+            display: block;
+            background-color: #d9534f;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        .btn-link-out:hover {
+            background-color: #c9302c;
+        }
+        .pdf-link-box {
+            background-color: #f0f7ff;
+            border: 2px dashed #3f72af;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .pdf-link-btn {
+            display: inline-block;
+            background-color: #3f72af;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .action-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3f72af;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            display: flex;
+            gap: 8px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .btn {
+            flex: 1;
+            padding: 10px 5px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-danger {
+            background-color: var(--primary);
+            color: white;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        .btn-proxy {
+            background-color: #3f72af;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部圖片 Banner（請確保已上傳 banner.jpg 至 GitHub） -->
+    <img src="banner.jpg" alt="天賦海灣 Providence Bay" class="header-banner">
+
+    <div class="header-text">
+        <h1>🚨天賦海灣1期 9月5日 EGM 懇請各位業主出席投反對票🚨</h1>
+        <p>捍衛自身資產與居住權益</p>
+    </div>
+
+    <div class="alert-banner">
+        ⚠️ 3個外牆大維修方案全部不合理！請全數否決！
+    </div>
+
+    <div class="container">
+
+        <!-- 1. 數據說話 -->
+        <div class="card">
+            <h2>📊 數據說話：外牆缺損僅 0.76%，何需數千萬全搭棚？</h2>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li style="margin-bottom: 8px;"><strong>缺損極低：</strong> 根據物管提交的外牆紅外線檢測報告，全屋苑外牆缺損面積<strong>僅佔總面積 0.76%</strong>。</li>
+                <li><strong>大白象工程：</strong> 如此微小的局部問題，完全可以用「按需局部搭棚修復」處理！物管與法團卻要全體業主夾數千萬全屋苑搭大棚？這完全是大白象工程！</li>
+            </ul>
+        </div>
+
+        <!-- 2. 揭穿陷阱 -->
+        <div class="card" style="border: 2px solid var(--primary);">
+            <h2 style="color: var(--primary); border-bottom-color: var(--primary);">🔍 揭穿陷阱：方案一根本係「陪跑局」！實質每戶需夾 8-10 萬，還未計無底洞追加撥款！</h2>
+            <p>請各位業主仔細看看官方工程估價單！大家心裡明白，一般業主夾錢做大維修，無非都希望外牆能清洗重刷、煥然一新。但顧問公司提出的方案一（$2,894 萬），根本是精心設計的<strong>「陪跑套路」</strong>——故意做成一個「花幾千萬卻連牆都不洗（不包外牆清洗與油漆）」的極端方案，營造出選方案一等於白花錢的錯覺，<strong>逼使大家只能被迫選擇費用更天價的方案二（$4,770萬）或方案三（$5,147萬）！</strong></p>
+            
+            <h3 style="margin-top: 15px; font-size: 1.05rem; color: #112d4e;">💰 方案費用與業主實質負擔對比：</h3>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>方案</th>
+                        <th>總工程費用</th>
+                        <th>扣資助後全屋苑自負額</th>
+                        <th>業主平均分攤</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>方案 1</strong></td>
+                        <td>$2,894 萬</td>
+                        <td>約 $2,100 萬</td>
+                        <td>約 5 萬 (根本不會選)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>方案 2</strong></td>
+                        <td>$4,770 萬</td>
+                        <td>約 $3,900 萬</td>
+                        <td class="highlight">約 9 萬</td>
+                    </tr>
+                    <tr>
+                        <td><strong>方案 3</strong></td>
+                        <td>$5,147 萬</td>
+                        <td>約 $4,300 萬</td>
+                        <td class="highlight">約 10 萬</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.85rem; color: #666;">* 信和資助 1,000 萬扣除獨立屋分賬與顧問費後，實際剩餘可用 Funding 僅剩約 800 萬。</p>
+
+            <ul style="margin-left: 20px; margin-top: 12px;">
+                <li style="margin-bottom: 8px;"><strong>天價費用去咗邊？</strong> 光是「棚架工程 ($1,267 萬)」加「保險與雜項 ($214 萬)」，就白白吞掉 <strong>$1,482 萬</strong>（佔總價逾 51%）！而真正的外牆結構修補費（石矢+批盪+飾面）加起來<strong>只有約 318 萬</strong>！</li>
+                <li style="margin-bottom: 8px;"><strong>⚠️ 致命風險：這還只是初步報價！</strong> 按照方案二與方案三，每戶初步已經要夾 <strong>約 8 萬至 10 萬元</strong>！這還完全未計算工程展開後、做到一半又以各種藉口「天價追加撥款 / 逼業主再加錢」的無底洞風險！</li>
+                <li><strong>慘痛前車之鑑——宏福苑由 1.5 億飆升至 3.3 億：</strong> 宏福苑當年大維修<strong>中標報價原本只需 1.52 億元</strong>，開工後卻被各種理由不斷加價修改方案，<strong>最終天價索價高達 3.3 億元，足足翻了一倍多</strong>！一旦我們批出數千萬工程，今天說夾 8-10 萬，明天隨時被逼追加夾 15-20 萬！</li>
+            </ul>
+
+            <div class="pdf-link-box">
+                📄 <strong>【有圖有真相】親自查看工程估價單明細 PDF：</strong><br>
+                <a href="https://drive.google.com/file/d/1ay8J7dG-Myw5RgGYlTmW2-gLx0sQJNNz/view?usp=drivesdk" class="pdf-link-btn" target="_blank">點此打開 Google Drive 官方估價單</a>
+            </div>
+        </div>
+
+        <!-- 3. 官方修條例政策印證 -->
+        <div class="card" style="border-left: 5px solid #2a5298; background-color: #f4f8ff;">
+            <h2>🏛️ 【官方政策印證】政府緊急修訂《建築物管理條例》！我們應等待新法例落實再議，何需急於一時？</h2>
+            <p>大家必須高度警惕！我們天賦海灣業主已經<strong>一次又一次喊停大維修</strong>，但幕後卻始終有人<strong>一次又一次暗中死灰復燃、強行推進</strong>，情況就跟當年的「宏福苑」如出一轍！</p>
+            
+            <p style="margin-top: 10px;">正因為宏福苑等大維修圍標風波與悲劇震撼全港，<strong>政府已正式展開公眾諮詢，緊急修訂《建築物管理條例》（第344章）</strong>，目標正是要深化改革、堵塞大廈維修與授權票漏洞以保障業主權益：</p>
+            
+            <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                <li style="margin-bottom: 8px;"><strong>官方承認漏洞，即將嚴格監管：</strong> 政府諮詢文件明確建議提高大型維修工程的「業主親自投票門檻」，並對「授權票」實施四大改革措施（包括限制每人手持授權票上限、公開授權名單、強制申報利益等）。</li>
+                <li style="margin-bottom: 8px;"><strong>為什麼有人急於現在硬推？</strong> 新法例即將落實保護業主，<strong>有心人正是想趕在政府修例堵塞漏洞之前</strong>，利用現行舊條例的死角，急急忙忙在 9月5日 EGM 逼大家通過數千萬元天價工程！</li>
+                <li><strong>我們的理性訴求——等待新法落實再議：</strong> 明明政府已經在修例保障業主，天賦海灣樓齡僅十幾年、外牆缺損更只有 0.76%，<strong>我們根本沒有迫切性！全體業主應堅決反對，要求等待政府新法例正式落實後再行檢討</strong>，絕不能讓自己的資產與積蓄被條例漏洞吞噬！</li>
+            </ul>
+
+            <div class="pdf-link-box" style="background: white; border-style: solid;">
+                📰 <strong>【香港電台 RTHK 官方報道】</strong><br>
+                <a href="https://newsprd.rthk.hk/rthk/ch/component/k2/1865894-20260812.htm" class="pdf-link-btn" target="_blank">點此閱讀政府修訂《建築物管理條例》公眾諮詢新聞 ➔</a>
+            </div>
+        </div>
+
+        <!-- 4. 破除迷思 -->
+        <div class="card" style="border-left: 5px solid #3f72af;">
+            <h2>💡 破除迷思：「外牆重刷樓價就會爆升？」睇睇大埔真實案例！</h2>
+            <p>有部分業主以為重刷外牆美化後，樓價就會大幅升值，這完全是美麗的誤會。我們拿大埔區的真實例子與數據說話：</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li style="margin-bottom: 8px;"><strong>大埔海寶花園（歷經圍標爭議，樓價未見升值）：</strong> 曾因大判追薪及涉嫌圍標風波備受關注。大維修工程主要在於解決樓宇老化問題而非推高投資回報，工程完成後成交呎價跟隨大市調整（現時平均實用呎價約在 $11,000 至 $11,500 水平），<strong>並未直接帶來顯著的樓價「升值」</strong>。</li>
+                <li style="margin-bottom: 8px;"><strong>大埔新興花園（拆棚後造價平穩，僅具保值功能）：</strong> 大維修及拆除外牆棚網後，近期成交造價表現平穩（折合實用呎價約在 $10,000 水平）。整體屋苑僅屬長遠改善外觀與結構安全而發揮「保值」作用，<strong>絕無出現顯著的爆發性升值</strong>。</li>
+                <li><strong>天賦海灣樓齡僅十幾年，根本無迫切性：</strong> 海寶與新興樓齡高達數十年，有迫切的結構老化與安全問題不得不做。反觀天賦海灣<strong>樓齡僅十幾年，外牆缺損更只有 0.76%</strong>！夾幾千萬元去搭大棚重刷外牆，既換不到樓價爆升，反而要承受圍標爛尾與工程追加撥款的巨大風險！</li>
+            </ul>
+        </div>
+
+        <!-- 5. 極度黑暗 -->
+        <div class="dark-box">
+            <h2>⚠️ 極度黑暗：招標工程公司深涉宏福苑圍標網絡，運作極度黑幕！</h2>
+            <p>本次參與我們天賦海灣大維修招標的工程公司/顧問，背後網絡被揭發與廉政公署及競委會立案調查的「宏福苑大維修圍標集團」有著千絲萬縷的黑暗勾結！該網絡運作圍標手段極度黑暗，操控影子公司合謀定價、過度估價及故意拖延工程，一旦讓其染指天賦海灣數千萬元工程，全體業主隨時陷入工程爛尾與天價追加撥款的噩夢！</p>
+            
+            <a href="investigation.html" class="btn-link-out">⚠️ 點此開啟專頁：查看工程公司黑暗圍標背景與新聞紀錄 →</a>
+        </div>
+
+        <!-- 6. 四大惡夢 -->
+        <div class="card">
+            <h2>⚠️ 一旦搭棚開工，全體業主陷入四大惡夢</h2>
+            
+            <div class="pain-points">
+                <div class="pain-card">
+                    <h3>🏚️ 賣不出去</h3>
+                    <p>二手成交即時冰封！買家見圍網即打退堂鼓，二手價大打折扣。</p>
+                </div>
+                <div class="pain-card">
+                    <h3>📉 租不出去</h3>
+                    <p>租客拒絕高價租住圍網單位，必定要求大幅減租甚至搬走！</p>
+                </div>
+                <div class="pain-card">
+                    <h3>😷 居住受罪</h3>
+                    <p>整年不見天日！拆冷氣機架、全屋封窗、室內悶熱、治安與私隱受損！</p>
+                </div>
+                <div class="pain-card">
+                    <h3>⌛ 無限期拖延</h3>
+                    <p>香港颱風雨季多，工程必定不停延期，越拖越貴，每戶分攤更多錢！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. 我們的立場 -->
+        <div class="card" style="background-color: #fff9f9; border: 2px solid var(--primary);">
+            <h2 style="color: var(--primary); border-bottom-color: var(--primary);">🛑 我們的立場：三個方案，全數否決！</h2>
+            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">相信各位業主都有獨立思考能力！三個方案全部都不好，請全部投【反對票】！</p>
+            <p>只有全數否決這三個不合理方案，才能逼使法團與物管重新檢討，改為提出真正合理、省錢、高效的「按需局部修復」方案！</p>
+        </div>
+
+        <!-- 8. 行動指南與授權書預留 -->
+        <div class="card">
+            <h2>🗳️ 告急！我們最少需要 60 戶/業權份數投反對票</h2>
+            <p>漏水戶（約 40 戶）極大機會投贊成票以求有人夾錢。我們必須集結至少 60 戶（或靠大單位業權份數）投下反對票，才能成功護盤！</p>
+
+            <div class="action-box">
+                <strong>業主現在需要做的事：</strong>
+                <ol style="margin-left: 20px; margin-top: 8px;">
+                    <li><strong>9月5日親身出席：</strong> 親自到場投下【全反對票】。</li>
+                    <li><strong>簽署授權票：</strong> 若當天無法出席，<strong>切勿交空白授權書給管理處或法團主席</strong>！請即刻下載並簽署「指定反對授權書」，交給信任的反對代表或鄰居。</li>
+                </ol>
+            </div>
+
+            <!-- 授權書預留下載區塊 -->
+            <div class="pdf-link-box" style="margin-top: 20px; background-color: #fff8e1; border-color: #ffa000;">
+                📥 <strong>【未能出席業主必備】下載 EGM 指定反對授權書：</strong><br>
+                <a href="#" class="pdf-link-btn" style="background-color: #ffa000;" target="_blank">📥 點此下載「反對授權書」PDF</a>
+            </div>
+        </div>
+
+        <!-- 9. 後話建議 -->
+        <div class="card" style="background-color: #f0f7ff; border: 2px solid #3f72af;">
+            <h2 style="color: #112d4e;">🚀 後話建議：引進「無人機清洗外牆」，省錢又高效！</h2>
+            <p>如果業主們希望美化屋苑外觀，我們**根本不需要花幾千萬元去搭大棚**！</p>
+            <p style="margin-top: 8px;">同屬<strong>信和管理</strong>的現代化屋苑（例如觀塘凱滙等），早已引進並採用<strong>「無人機高空清洗外牆」</strong>新科技！無人機清洗具有極高效率、成本低廉、不需搭棚、不影響業主採光與隱私等優點。我們應要求管理處與法團積極考慮此類新科技方案，用最合理的預算達到煥然一新的效果！</p>
+        </div>
+
+    </div>
+
+    <!-- 底部固定按鈕 -->
+    <div class="sticky-footer">
+        <a href="https://wa.me/?text=🚨%20天賦海灣1期業主注意！2,900萬居然只係陪跑方案？9.5%20EGM%20請全體業主投反對票！詳情：%20" class="btn btn-whatsapp" target="_blank">轉發 WhatsApp</a>
+        <a href="#" class="btn btn-proxy" target="_blank">📥 下載授權書</a>
+        <a href="https://drive.google.com/file/d/1ay8J7dG-Myw5RgGYlTmW2-gLx0sQJNNz/view?usp=drivesdk" class="btn btn-danger" target="_blank">估價單 PDF</a>
+    </div>
+
+</body>
+</html>
