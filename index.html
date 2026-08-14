@@ -40,6 +40,11 @@
             z-index: 999;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
             border-bottom: 2px solid #3f72af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .header-banner {
@@ -147,7 +152,7 @@
         }
         .ppt-img {
             width: 100%;
-            height: auto;
+            height auto;
             border-radius: 8px;
             border: 1px solid #ddd;
             margin: 15px 0;
@@ -253,6 +258,11 @@
             margin-top: 15px;
             border-radius: 4px;
         }
+        .counter-footer-box {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+        }
         .sticky-footer {
             position: fixed;
             bottom: 0;
@@ -296,9 +306,10 @@
 </head>
 <body>
 
-    <!-- 1. Top Sticky Countdown Bar -->
+    <!-- 1. Top Sticky Countdown Bar + Hits Counter Badge -->
     <div class="sticky-top-bar">
-        ⏱️ 距離 EGM 關鍵投票：<span id="mini-timer">載入中...</span>
+        <span>⏱️ 距離 EGM 關鍵投票：<span id="mini-timer">載入中...</span></span>
+        <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgreenly21.github.io%2Fsaveprovidencebay1%2F&label=Views&icon=binoculars-fill&color=%23198754&message=&style=flat&tz=UTC" alt="Views Counter" style="height: 20px; vertical-align: middle;">
     </div>
 
     <!-- Header Banner -->
@@ -346,7 +357,7 @@
             <h2>📊 數據說話：外牆缺損僅 0.76%，何需數千萬全搭棚？</h2>
             <ul style="margin-left: 20px; margin-top: 10px;">
                 <li style="margin-bottom: 8px;"><strong>缺損極低：</strong> 根據物業管理處 (MO) 提交的外牆紅外線檢測報告，全屋苑外牆缺損面積<strong>僅佔總面積 0.76%</strong>。</li>
-                <li><strong>大白象工程：</strong> 如此微小的局部問題，完全可以用「按需局部修復」處理！物業管理處與業委會卻要全體業主夾數千萬全屋苑搭大棚？這完全是大白象工程！</li>
+                <li><strong>大白象工程：</strong> 如此微小的局部問題，完全可以用「按需局部修復」處理！如果被按節奏推往并通過TWK方案, 全體業主, 同意的或不同意的, 都必須夾數千萬全屋苑大搭棚!！</li>
             </ul>
         </div>
 
@@ -547,6 +558,12 @@
                 <li style="margin-bottom: 6px;"><strong>技術優勢顯著：</strong> 無人機高壓噴洗成本極低廉、施工期極短、無需搭棚圍網，完全不影響業主採光、治安與私隱。</li>
                 <li><strong>建設性訴求：</strong> 我們應要求管理處與業委會積極考慮此類真正高科技、低成本的方案，把精神與資源留下來處理屋苑真正急切的設施設備維護！</li>
             </ul>
+        </div>
+
+        <!-- Counter Badge Footer -->
+        <div class="counter-footer-box">
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 5px;">👀 本站累積業主瀏覽次數：</p>
+            <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgreenly21.github.io%2Fsaveprovidencebay1%2F&label=Views&icon=binoculars-fill&color=%23198754&message=&style=flat&tz=UTC" alt="Views Counter">
         </div>
 
     </div>
