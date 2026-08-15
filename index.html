@@ -72,6 +72,25 @@
             opacity: 0.95;
         }
 
+        /* News Flash Card */
+        .news-flash-card {
+            background: #fff3cd;
+            border: 2px solid #ffecb5;
+            border-left: 6px solid #ffc107;
+            border-radius: 10px;
+            padding: 18px 15px;
+            margin: 15px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .news-flash-card h2 {
+            color: #856404;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffe8a1;
+            padding-bottom: 6px;
+        }
+
         /* Large Hero Countdown Card */
         .hero-countdown-card {
             background: #1a1a1a;
@@ -152,7 +171,7 @@
         }
         .ppt-img {
             width: 100%;
-            height auto;
+            height: auto;
             border-radius: 8px;
             border: 1px solid #ddd;
             margin: 15px 0;
@@ -320,44 +339,64 @@
         <p>請全體業主投【反對票】！否決全部不合理大維修方案</p>
     </div>
 
-    <!-- 2. Hero Large Countdown Box -->
-    <div class="hero-countdown-card">
-        <h3>⏱️ 距離 EGM 大會決戰倒數（日期暫定 9月5日）</h3>
-        <div class="timer-grid">
-            <div class="time-block">
-                <div class="time-number" id="days">00</div>
-                <div class="time-label">天</div>
-            </div>
-            <div class="time-block">
-                <div class="time-number" id="hours">00</div>
-                <div class="time-label">小時</div>
-            </div>
-            <div class="time-block">
-                <div class="time-number" id="minutes">00</div>
-                <div class="time-label">分鐘</div>
-            </div>
-            <div class="time-block">
-                <div class="time-number" id="seconds">00</div>
-                <div class="time-label">秒</div>
-            </div>
-        </div>
-        <div class="timer-subnote">
-            ⚠️ 9月5日為暫定日期，待管理處發出正式確切通告後將自動同步更新
-        </div>
-    </div>
-
-    <div class="alert-banner">
-        ⚠️ 徐偉杰顧問公司提出的 3 個天價外牆方案全部不合理！請全數否決！
-    </div>
-
     <div class="container">
+
+        <!-- 📢 【最新消息欄位】：8月15日現場大會即時跟進 -->
+        <div class="news-flash-card">
+            <h2>📢 【8月15日最新動態】揭穿「夾少咗錢」的數字掩眼法！暗中掏空 500 萬屋苑儲備金！</h2>
+            <p style="font-weight: bold; color: #d9534f; margin-bottom: 8px;">在 8 月 15 日早上 10 點的簡報會上，管理處與徐偉杰展示了最新簡報，看似每戶集資金額減少，背後竟隱藏極大的財務陷阱：</p>
+            
+            <img src="meeting_aug15.jpg" alt="8月15日簡報會現場照片" class="ppt-img">
+
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li style="margin-bottom: 8px;">
+                    <strong>⚠️ 「1,500 萬資助」的掩眼法：</strong> 簡報中聲稱有「約 $15,000,000」由信和心意金及屋苑儲備支付。但事實上，<strong>信和心意金只有 1,000 萬（而且一部分要與獨立屋 House 分賬，實際到分層單位的根本沒有 1,000 萬）</strong>！
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <strong>⚠️ 偷偷動用 500 萬屋苑儲備金：</strong> 為了營造「每戶夾錢變少」的假象，管理處竟打算<strong>暗中抽取屋苑約 500 萬元的公共儲備金</strong>來補貼這個非迫切的大維修！
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <strong>⚠️ 日後管理費恐面臨加價危機：</strong> 天賦海灣樓齡已邁入 10 幾年，大堂冷氣機、水泵、對講機系統等基礎設施已進入故障高峰期，未來維修費用極高！<strong>隨便掏空屋苑儲備金，日後急需維修公共設施時，屋苑將面臨儲備乾涸、隨時大幅加管理費或再次集資的危機！</strong>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2. Hero Large Countdown Box -->
+        <div class="hero-countdown-card">
+            <h3>⏱️ 距離 EGM 大會決戰倒數（日期暫定 9月5日）</h3>
+            <div class="timer-grid">
+                <div class="time-block">
+                    <div class="time-number" id="days">00</div>
+                    <div class="time-label">天</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="hours">00</div>
+                    <div class="time-label">小時</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="minutes">00</div>
+                    <div class="time-label">分鐘</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="seconds">00</div>
+                    <div class="time-label">秒</div>
+                </div>
+            </div>
+            <div class="timer-subnote">
+                ⚠️ 9月5日為暫定日期，待管理處發出正式確切通告後將自動同步更新
+            </div>
+        </div>
+
+        <div class="alert-banner">
+            ⚠️ 徐偉杰提出的 3 個天價外牆方案全部不合理！請全數否決！
+        </div>
 
         <!-- 1. 數據說話 -->
         <div class="card">
             <h2>📊 數據說話：外牆缺損僅 0.76%，何需數千萬全搭棚？</h2>
             <ul style="margin-left: 20px; margin-top: 10px;">
                 <li style="margin-bottom: 8px;"><strong>缺損極低：</strong> 根據物業管理處 (MO) 提交的外牆紅外線檢測報告，全屋苑外牆缺損面積<strong>僅佔總面積 0.76%</strong>。</li>
-                <li><strong>大白象工程：</strong> 如此微小的局部問題，完全可以用「按需局部修復」處理！如果被按節奏推往并通過TWK方案, 全體業主, 同意的或不同意的, 都必須夾數千萬全屋苑大搭棚!！</li>
+                <li><strong>大白象工程：</strong> 如此微小的局部問題，完全可以用「按需局部修復」處理！如果被按節奏推往并通過徐偉杰方案, 全體業主, 同意的或不同意的, 都必須夾數千萬全屋苑大搭棚!！</li>
             </ul>
         </div>
 
@@ -380,7 +419,7 @@
                 </li>
 
                 <!-- 截圖 1：皇冠燈與渠管 -->
-                <img src="quote_others.jpg" alt="TWK 報價單截圖：皇冠燈與渠管工程" class="quote-img">
+                <img src="quote_others.jpg" alt="徐偉杰報價單截圖：皇冠燈與渠管工程" class="quote-img">
                 
                 <li style="margin-bottom: 6px; margin-top: 10px;">
                     <strong>🗑️ 荒謬細項三：牆身肉眼根本無鐵器，憑空開價 $20.7 萬拆除廢物！</strong><br>
@@ -389,18 +428,18 @@
                 </li>
 
                 <!-- 截圖 2：拆除鐵器 -->
-                <img src="quote_disposal.jpg" alt="TWK 報價單截圖：拆除鐵器工程" class="quote-img">
+                <img src="quote_disposal.jpg" alt="徐偉杰報價單截圖：拆除鐵器工程" class="quote-img">
             </ul>
 
-            <p style="margin-top: 15px;"><strong>💰 拿 MO 原本方案對比 TWK 的「天價陪跑局」：</strong></p>
+            <p style="margin-top: 15px;"><strong>💰 拿 MO 原本方案對比徐偉杰的「天價陪跑局」：</strong></p>
             <img src="mo_ppt.jpg" alt="物業管理處大會 PPT 改善方案對比圖" class="ppt-img">
 
             <ul style="margin-left: 20px; margin-top: 10px;">
                 <li style="margin-bottom: 8px;"><strong>MO 原本方案一與二（免聘顧問，只需百多萬）：</strong> 管理處本週六會加回原本大會 PPT 的方案，處理滲漏個案<strong>估算費用僅需 $75 萬至 $175 萬（清洗每次約 $15萬-$39萬），而且完全無需聘請工程顧問公司</strong>！這證明真正需要修的地方極少，局部修復既高效又省錢！</li>
-                <li style="margin-bottom: 12px;"><strong>揭穿徐偉杰方案 1 的「陪跑陷阱」：</strong> 徐偉杰方案 1（$2,894 萬）故意做成「花近 3,000 萬卻連外牆都不清洗、不油漆」的極端方案，營造選方案 1 等於白花錢的錯覺，<strong>逼使大家只能被迫選擇費用更天價的 TWK 方案 2（$4,770萬）或 TWK 方案 3（$5,147萬）！</strong></li>
+                <li style="margin-bottom: 12px;"><strong>揭穿徐偉杰方案 1 的「陪跑陷阱」：</strong> 徐偉杰方案 1（$2,894 萬）故意做成「花近 3,000 萬卻連外牆都不清洗、不油漆」的極端方案，營造選方案 1 等於白花錢的錯覺，<strong>逼使大家只能被迫選擇費用更天價的徐偉杰方案 2（$4,770萬）或徐偉杰方案 3（$5,147萬）！</strong></li>
             </ul>
 
-            <h3 style="margin-top: 15px; font-size: 1.05rem; color: #112d4e;">💰 徐偉杰顧問方案費用與業主實質負擔對比：</h3>
+            <h3 style="margin-top: 15px; font-size: 1.05rem; color: #112d4e;">💰 徐偉杰方案費用與業主實質負擔對比：</h3>
             <table class="price-table">
                 <thead>
                     <tr>
@@ -434,8 +473,8 @@
             <p style="font-size: 0.85rem; color: #666;">* 信和資助 1,000 萬扣除獨立屋分賬與顧問費後，實際剩餘可用 Funding 僅剩約 800 萬。</p>
 
             <ul style="margin-left: 20px; margin-top: 12px;">
-                <li style="margin-bottom: 8px;"><strong>天價費用去咗邊？</strong> 徐偉杰 方案中光是「棚架工程 ($1,267 萬)」加「保險與雜項 ($214 萬)」，就白白吞掉 <strong>$1,482 萬</strong>（佔總價逾 51%）！而真正的外牆結構修補費（石矢+批盪+飾面）加起來<strong>只有約 318 萬</strong>！</li>
-                <li style="margin-bottom: 8px;"><strong>⚠️ 致命風險：這還只是初步報價！</strong> 按照 徐偉杰 方案 2 與 3，每戶初步已經要夾 <strong>約 8 萬至 10 萬元</strong>！這還完全未計算工程展開後、做到一半又以各種藉口「天價追加撥款 / 逼業主再加錢」的無底洞風險！</li>
+                <li style="margin-bottom: 8px;"><strong>天價費用去咗邊？</strong> 徐偉杰方案中光是「棚架工程 ($1,267 萬)」加「保險與雜項 ($214 萬)」，就白白吞掉 <strong>$1,482 萬</strong>（佔總價逾 51%）！而真正的外牆結構修補費（石矢+批盪+飾面）加起來<strong>只有約 318 萬</strong>！</li>
+                <li style="margin-bottom: 8px;"><strong>⚠️ 致命風險：這還只是初步報價！</strong> 按照徐偉杰方案 2 與 3，每戶初步已經要夾 <strong>約 8 萬至 10 萬元</strong>！這還完全未計算工程展開後、做到一半又以各種藉口「天價追加撥款 / 逼業主再加錢」的無底洞風險！</li>
                 <li><strong>慘痛前車之鑑——宏福苑由 1.5 億飆升至 3.3 億：</strong> 宏福苑當年大維修<strong>中標報價原本只需 1.52 億元</strong>，開工後卻被各種理由不斷加價修改方案，<strong>最終天價索價高達 3.3 億元，足足翻了一倍多</strong>！今天說夾 8-10 萬，明天隨時被逼追加夾 15-20 萬！</li>
             </ul>
 
@@ -513,8 +552,8 @@
 
         <!-- 7. 我們的立場 -->
         <div class="card" style="background-color: #fff9f9; border: 2px solid var(--primary);">
-            <h2 style="color: var(--primary); border-bottom-color: var(--primary);">🛑 我們的立場：三個 TWK 方案，全數否決！</h2>
-            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">天賦海灣沒有法團，大維修做不做完全掌握在我們業主手上的投票權！三個 TWK 方案全部都不合理，請全體業主投【反對票】！</p>
+            <h2 style="color: var(--primary); border-bottom-color: var(--primary);">🛑 我們的立場：三個徐偉杰方案，全數否決！</h2>
+            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">天賦海灣沒有法團，大維修做不做完全掌握在我們業主手上的投票權！三個徐偉杰方案全部都不合理，請全體業主投【反對票】！</p>
             <p>只有全數否決這三個不合理方案，才能逼使物業管理處 (MO) 採用原本無需顧問、只需百多萬的方案，或者提出真正合理、省錢、高效的「按需局部修復」方案！</p>
         </div>
 
@@ -570,7 +609,7 @@
 
     <!-- 底部固定按鈕 -->
     <div class="sticky-footer">
-        <a href="https://wa.me/?text=🚨%20天賦海灣1期業主注意！TWK2,900萬居然只係陪跑方案？請全體業主投反對票！詳情：%20" class="btn btn-whatsapp" target="_blank">轉發 WhatsApp</a>
+        <a href="https://wa.me/?text=🚨%20天賦海灣1期業主注意！徐偉杰2,900萬居然只係陪跑方案？請全體業主投反對票！詳情：%20" class="btn btn-whatsapp" target="_blank">轉發 WhatsApp</a>
         <a href="#" class="btn btn-proxy" target="_blank">📥 授權書跟進中</a>
         <a href="https://drive.google.com/file/d/1ay8J7dG-Myw5RgGYlTmW2-gLx0sQJNNz/view?usp=drivesdk" class="btn btn-danger" target="_blank">估價單 PDF</a>
     </div>
