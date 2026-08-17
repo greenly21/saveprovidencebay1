@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 天賦海灣1期 捍衛自身資產與居住權益</title>
+    <title>天賦海灣1期 業主大維修資訊站 | Providence Bay Phase 1</title>
     <style>
         :root {
             --primary: #d9534f;
             --primary-dark: #c9302c;
-            --secondary: #2a5298;
-            --dark: #222;
-            --light: #f8f9fa;
+            --secondary: #112d4e;
+            --accent: #3f72af;
+            --light-bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --dark-text: #222222;
         }
         * {
             box-sizing: border-box;
@@ -19,656 +21,259 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
         body {
-            background-color: #f4f6f9;
-            color: var(--dark);
+            background-color: var(--light-bg);
+            color: var(--dark-text);
             line-height: 1.6;
-            padding-bottom: 120px;
+            padding-bottom: 50px;
         }
         
-        .sticky-top-bar {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #112d4e;
-            color: #ffeb3b;
-            text-align: center;
-            padding: 8px 10px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            z-index: 999;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            border-bottom: 2px solid #3f72af;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .header-banner {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            max-height: 250px;
-        }
-        .header-text {
-            background: linear-gradient(135deg, #112d4e 0%, #3f72af 100%);
+        /* 頁首 Header */
+        .header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
             color: white;
             text-align: center;
             padding: 25px 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-        .header-text h1 {
-            font-size: 1.8rem;
+        .header h1 {
+            font-size: 1.6rem;
             margin-bottom: 8px;
             color: #ffeb3b;
         }
-        .header-text p {
-            font-size: 1.05rem;
-            opacity: 0.95;
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
         }
 
-        .urgent-action-card {
-            background: #fff0f0;
-            border: 2px solid #ff4d4f;
-            border-left: 8px solid #d9534f;
-            border-radius: 10px;
-            padding: 18px 15px;
-            margin: 15px auto;
-            max-width: 800px;
-            box-shadow: 0 4px 12px rgba(217, 83, 79, 0.15);
-        }
-        .urgent-action-card h2 {
-            color: #c9302c;
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #ffccc7;
-            padding-bottom: 6px;
-        }
-        .btn-to-action {
-            display: block;
-            background-color: #d9534f;
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1.05rem;
-            text-align: center;
-            margin-top: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .btn-to-action:hover {
-            background-color: #c9302c;
-        }
-
-        .news-flash-card {
-            background: #fff3cd;
-            border: 2px solid #ffecb5;
-            border-left: 6px solid #ffc107;
-            border-radius: 10px;
-            padding: 18px 15px;
-            margin: 15px auto;
-            max-width: 800px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-        .news-flash-card h2 {
-            color: #856404;
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #ffe8a1;
-            padding-bottom: 6px;
-        }
-
-        .hero-countdown-card {
-            background: #1a1a1a;
-            color: white;
-            border-radius: 10px;
-            padding: 18px 15px;
-            margin: 15px auto;
-            max-width: 770px;
-            text-align: center;
-            border: 2px solid #ffeb3b;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .hero-countdown-card h3 {
-            color: #ffeb3b;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-        }
-        .timer-grid {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-        .time-block {
-            background: #2a2a2a;
-            border: 1px solid #444;
-            border-radius: 8px;
-            padding: 8px 12px;
-            min-width: 65px;
-        }
-        .time-number {
-            font-size: 1.6rem;
-            font-weight: bold;
-            color: #ffffff;
-            line-height: 1.1;
-        }
-        .time-label {
-            font-size: 0.75rem;
-            color: #aaa;
-            margin-top: 4px;
-        }
-        .timer-subnote {
-            font-size: 0.85rem;
-            color: #ffc107;
-            background: rgba(255, 193, 7, 0.1);
-            padding: 6px 10px;
-            border-radius: 5px;
+        /* 瀏覽人次計數器 */
+        .counter-badge {
             display: inline-block;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .alert-banner {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 14px;
-            font-weight: bold;
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
-        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px 15px;
         }
-        .card {
-            background: white;
-            border-radius: 10px;
+
+        /* 號召行動卡片 (Action Card) */
+        .action-card {
+            background: #fff0f0;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px rgba(217, 83, 79, 0.15);
         }
-        .card h2 {
-            color: #112d4e;
-            border-bottom: 3px solid #3f72af;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
+        .action-card h2 {
+            color: var(--primary-dark);
             font-size: 1.3rem;
-        }
-        .ppt-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            margin: 15px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .quote-img {
-            width: 100%;
-            max-width: 650px;
-            height: auto;
-            border-radius: 6px;
-            border: 1px solid #d1d5db;
-            margin: 8px 0 16px 0;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            display: block;
-        }
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        .price-table th, .price-table td {
-            border: 1px solid #dee2e6;
-            padding: 12px 8px;
-            text-align: center;
-            font-size: 0.95rem;
-        }
-        .price-table th {
-            background-color: #f1f4f9;
-            color: #112d4e;
-        }
-        .highlight {
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.05rem;
-        }
-        .pain-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .pain-card {
-            background-color: #fff4f4;
-            border: 1px solid #ffcdd2;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-        }
-        .pain-card h3 {
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        .dark-box {
-            background-color: #1a1a1a;
-            color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 6px solid #d9534f;
-        }
-        .dark-box h2 {
-            color: #ffeb3b;
-            border-bottom: 2px solid #d9534f;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        .btn-link-out {
-            display: block;
-            background-color: #d9534f;
-            color: white;
-            padding: 14px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            text-align: center;
-            font-size: 1.05rem;
-        }
-        .pdf-link-box {
-            background-color: #f0f7ff;
-            border: 2px dashed #3f72af;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 15px 0;
-        }
-        .pdf-link-btn {
-            display: inline-block;
-            background-color: #3f72af;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .action-box {
-            background-color: #e8f4f8;
-            border-left: 5px solid #3f72af;
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 4px;
-        }
-        .counter-footer-box {
-            text-align: center;
-            margin: 20px 0;
-            padding: 10px;
-        }
-        .sticky-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: white;
-            border-top: 1px solid #ddd;
-            padding: 10px;
-            display: flex;
-            gap: 8px;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .btn {
-            flex: 1;
-            padding: 10px 5px;
-            border: none;
-            border-radius: 6px;
-            font-size: 0.88rem;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 8px;
         }
-        .btn-danger {
+        .btn-action {
+            display: block;
             background-color: var(--primary);
             color: white;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background 0.2s;
         }
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
+        .btn-action:hover {
+            background-color: var(--primary-dark);
         }
-        .btn-proxy {
-            background-color: #3f72af;
+
+        /* 摘要卡片 (Summary Cards) */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent);
+        }
+        .card-warning {
+            border-left-color: #f0ad4e;
+        }
+        .card-danger {
+            border-left-color: var(--primary);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .card-summary {
+            font-size: 0.98rem;
+            color: #444;
+            margin-bottom: 12px;
+        }
+        .card-summary ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        .card-summary li {
+            margin-bottom: 6px;
+        }
+
+        /* 折疊內容原創細節 (<details>) */
+        details {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: 1px solid #e9ecef;
+        }
+        summary {
+            font-weight: bold;
+            color: var(--accent);
+            cursor: pointer;
+            outline: none;
+            padding: 5px 0;
+            user-select: none;
+        }
+        summary:hover {
+            color: var(--secondary);
+        }
+        .details-content {
+            padding-top: 12px;
+            font-size: 0.92rem;
+            color: #333;
+            border-top: 1px dashed #dee2e6;
+            margin-top: 8px;
+            line-height: 1.7;
+        }
+
+        /* 按鈕連結樣式 */
+        .btn-subpage {
+            display: inline-block;
+            background-color: var(--secondary);
             color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .btn-subpage:hover {
+            background-color: var(--accent);
+        }
+
+        /* 頁尾 Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 30px;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
 
-    <div class="sticky-top-bar">
-        <span>⏱️ 距離 EGM 關鍵投票：<span id="mini-timer">載入中...</span></span>
-        <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgreenly21.github.io%2Fsaveprovidencebay1%2F&label=Views&icon=binoculars-fill&color=%23198754&message=&style=flat&tz=UTC" alt="Views Counter" style="height: 20px; vertical-align: middle;">
-    </div>
-
-    <img src="banner.jpg" alt="天賦海灣 Providence Bay" class="header-banner">
-
-    <div class="header-text">
-        <h1>🚨 天賦海灣1期 捍衛自身資產與居住權益</h1>
-        <p>請全體業主投【反對票】！否決全部不合理大維修方案</p>
+    <!-- 頁首 -->
+    <div class="header">
+        <h1>天賦海灣1期 業主維修權益關注站</h1>
+        <p>捍衛業主知情權 | 拒絕非必要天價工程 | 保障資產價值</p>
+        <div class="counter-badge">
+            👀 累計關注人次：<span id="busuanzi_value_site_pv">載入中...</span> 次
+        </div>
     </div>
 
     <div class="container">
 
-        <!-- 🚨 【業主緊急行動卡片】：直通 action.html -->
-        <div class="urgent-action-card">
-            <h2>🚨 【告急！業主緊急行動】防止 OC 主席擅自封殺較便宜方案！請於投票 14 天前一人一信發予 MO！</h2>
-            <p style="font-size: 0.95rem; margin-bottom: 8px;">
-                <strong>最新黑幕警告：</strong>業委會 (OC) 主席竟企圖以個人名義聲稱「委員已決定否決方案一及方案二」，但其他委員即場駁斥，指她總想用主席名義強行貫徹個人想法！這樣下去，EGM 當天表決票恐被剝奪平價選項，<strong>逼使大家投票時「只能選擇天價工程」</strong>！
-            </p>
-            <p style="font-weight: bold; color: #c9302c;">
-                👉 根據程序，業主有權在大會前 14 天向管理處提出動議。我們必須號召全體業主一人一信，要求 MO 必須在 EGM 議程正式加入「反對現階段進行任何大維修項目」選項！
-            </p>
-
-            <a href="action.html" class="btn-to-action">✉️ 點此進入：一鍵複製 Email 範本與發送動議 ➔</a>
+        <!-- 🚨 核心行動卡片 (置頂) -->
+        <div class="action-card">
+            <h2>🚨 緊急業主行動：一人一信反越權</h2>
+            <p>管理處 (MO) 擬於 9月5日 召開 EGM，卻傳出企圖封殺「完全反對大維修」選項！我們必須根據《建築物管理條例》向 MO 提出正式動議，強制要求印製反對選項。</p>
+            <a href="action.html" class="btn-action">✉️ 點此進入：一鍵複製 Email 發送動議 ➔</a>
         </div>
 
-        <div class="news-flash-card">
-            <h2>📢 【8月15日現場真相】揭穿「夾少咗錢」的數字掩眼法！暗中掏空 500 萬屋苑儲備金！</h2>
-            <p style="font-weight: bold; color: #d9534f; margin-bottom: 8px;">在 8 月 15 日早上 10 點的簡報會上，管理處與徐偉杰展示了最新簡報，看似每戶集資金額減少，背後竟隱藏極大的財務陷阱：</p>
-            
-            <img src="meeting_aug15.jpg" alt="8月15日簡報會現場照片" class="ppt-img">
-
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li style="margin-bottom: 8px;">
-                    <strong>⚠️ 「1,500 萬資助」的掩眼法：</strong> 簡報中聲稱有「約 $15,000,000」由信和心意金及屋苑儲備支付。但事實上，<strong>信和心意金只有 1,000 萬（而且一部分要與獨立屋 House 分賬，實際到分層單位的根本沒有 1,000 萬）</strong>！
-                </li>
-                <li style="margin-bottom: 8px;">
-                    <strong>⚠️ 偷偷動用 500 萬屋苑儲備金：</strong> 為了營造「每戶夾錢變少」的假象，管理處竟打算<strong>暗中抽取屋苑約 500 萬元的公共儲備金</strong>來補貼這個非迫切的大維修！
-                </li>
-                <li style="margin-bottom: 8px;">
-                    <strong>⚠️ 日後管理費恐面臨加價危機：</strong> 天賦海灣樓齡已邁入 10 幾年，大堂冷氣機、水泵、對講機系統等基礎設施已進入故障高峰期，未來維修費用極高！<strong>隨便掏空屋苑儲備金，日後急需維修公共設施時，屋苑將面臨儲備乾涸、隨時大幅加管理費或再次集資的危機！</strong>
-                </li>
-            </ul>
-        </div>
-
-        <div class="hero-countdown-card">
-            <h3>⏱️ 距離 EGM 大會決戰倒數（日期暫定 9月5日）</h3>
-            <div class="timer-grid">
-                <div class="time-block">
-                    <div class="time-number" id="days">00</div>
-                    <div class="time-label">天</div>
-                </div>
-                <div class="time-block">
-                    <div class="time-number" id="hours">00</div>
-                    <div class="time-label">小時</div>
-                </div>
-                <div class="time-block">
-                    <div class="time-number" id="minutes">00</div>
-                    <div class="time-label">分鐘</div>
-                </div>
-                <div class="time-block">
-                    <div class="time-number" id="seconds">00</div>
-                    <div class="time-label">秒</div>
-                </div>
+        <!-- ⚠️ 痛點卡片 1：冷氣拆裝與生活惡夢 -->
+        <div class="card card-danger">
+            <h3>⚠️ 你以為只是洗外牆？全屋冷氣要被拆走！</h3>
+            <div class="card-summary">
+                很多業主誤以為大維修只是「洗牆油漆」，根本不知道涉及龐大的生活與出租惡夢：
+                <ul>
+                    <li><strong>重裝費用是未知之數</strong>：顧問公司報價單<strong>僅列出拆除及臨時搬遷</strong>，完全無保證完工後的重新安裝、拉喉及加雪種費用！</li>
+                    <li><strong>自住業主</strong>：施工期長達 1-2 年，期間全屋冷氣被拆、窗戶被封，炎夏如何居住？</li>
+                    <li><strong>出租業主</strong>：單位無冷氣且失去私隱，租客必要求減租或解約，陷入長期空置期！</li>
+                </ul>
             </div>
-            <div class="timer-subnote">
-                ⚠️ 9月5日為暫定日期，待管理處發出正式確切通告後將自動同步更新
+            <details>
+                <summary>🔍 點擊查看：冷氣拆裝細項與出租風險分析</summary>
+                <div class="details-content">
+                    <p>根據徐偉杰建築師有限公司之報價單，工程涉及全屋外牆搭建大棚架，影響所有冷氣機散熱機組。報價細項僅含「拆卸及搬遷」，完工後業主需自行承擔私家師傅重裝之巨額未知成本（估計每部冷氣可高達 $2,000 - $4,000）。</p>
+                    <p style="margin-top:8px;"><strong>出租業主警示：</strong> 施工期間搭棚密封，單位喪失採光與通風，租客有絕對理據要求解約退租。在新租客極難招攬的情況下，業主將面臨長達 24 個月的租金收入中斷。</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- 📢 痛點卡片 2：500萬儲備金與財務真相 -->
+        <div class="card card-warning">
+            <h3>📢 500萬儲備金真相與天價細項</h3>
+            <div class="card-summary">
+                外牆缺損僅 0.76%，何需花費數千萬元全屋搭棚？
+                <ul>
+                    <li><strong>沒壞的皇冠燈要花 $102 萬？</strong> 8月15日簡報會展示之細項中，包含大量非急切性高價更換項目。</li>
+                    <li><strong>暗中掏空 $500 萬儲備金</strong>：試圖以公共儲備金掩蓋業主集資數字，將引爆日後管理費大幅加價危機！</li>
+                </ul>
             </div>
+            <details>
+                <summary>🔍 點擊查看：0.76% 缺損數據與預算對比</summary>
+                <div class="details-content">
+                    <p>根據管理處提交之紅外線檢測報告，全屋苑外牆缺損極低（僅 0.76%），只需進行局部繩索（Rope Access）修補即可，成本僅為搭大棚工程的幾十分之一。</p>
+                    <p style="margin-top:8px;">此外，若強行動用約 $500 萬元屋苑公共儲備金，當未來電梯、水泵等基礎設施邁入維修高峰期時，屋苑將陷入財務赤字，最終仍需全體業主集資或大幅提高每月管理費。</p>
+                </div>
+            </details>
         </div>
 
-        <div class="alert-banner">
-            ⚠️ 徐偉杰提出的 3 個天價外牆方案全部不合理！請全數否決！
-        </div>
-
+        <!-- 🔍 痛點卡片 3：背景調查（新聞事實引用） -->
         <div class="card">
-            <h2>📊 數據說話：外牆缺損僅 0.76%，何需數千萬全搭棚？</h2>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li style="margin-bottom: 8px;"><strong>缺損極低：</strong> 根據物業管理處 (MO) 提交的外牆紅外線檢測報告，全屋苑外牆缺損面積<strong>僅佔總面積 0.76%</strong>。</li>
-                <li><strong>大白象工程：</strong> 如此微小的局部問題，完全可以用「按需局部修復」處理！如果被按節奏推往并通過徐偉杰方案, 全體業主, 同意的或不同意的, 都必須夾數千萬全屋苑大搭棚!！</li>
-            </ul>
-        </div>
-
-        <div class="card" style="border: 2px solid var(--primary);">
-            <h2 style="color: var(--primary); border-bottom-color: var(--primary);">🔍 事實勝於雄辯：魔鬼在細節！揭穿徐偉杰天價報價單的荒謬之處</h2>
-            <p>請各位業主仔細看看徐偉杰報價單內的細項，大量項目根本是<strong>無中生有、拿運作正常的設施來亂花大家的血汗錢</strong>：</p>
-            
-            <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 15px;">
-                <li style="margin-bottom: 6px;">
-                    <strong>💡 荒謬細項一：天台皇冠燈無壞無故障，竟要花 $102.9 萬全面更換！</strong><br>
-                    <em>(項 4.2.1：將天台現有皇冠燈及燈槽進行全面更換 — $1,029,000)</em><br>
-                    👉 屋苑天台的皇冠燈<strong>現時一直運作良好、完好無缺</strong>！既然完全沒有故障，為什麼無緣無故要全體業主夾過百萬元去「全面更換」？這到底有什麼迫切性？
-                </li>
-                
-                <li style="margin-bottom: 6px;">
-                    <strong>🚽 荒謬細項二：渠管排污運作完全正常，為何要花 $77.1 萬大動幹戈？</strong><br>
-                    <em>(項 4.1.1 檢查費 $12.8 萬 + 項 4.1.2 局部更換排污/雨水/糞渠 $64.3 萬 = 合計 $77.1 萬)</em><br>
-                    👉 屋苑現時的公眾排污渠與雨水渠<strong>一直正常運作、無堵塞無滲漏</strong>！管理處與顧問公司為什麼要突然花幾十萬去全面檢查甚至更換？
-                </li>
-
-                <img src="quote_others.jpg" alt="徐偉杰報價單截圖：皇冠燈與渠管工程" class="quote-img">
-                
-                <li style="margin-bottom: 6px; margin-top: 10px;">
-                    <strong>🗑️ 荒謬細項三：牆身肉眼根本無鐵器，憑空開價 $20.7 萬拆除廢物！</strong><br>
-                    <em>(項 3.1.2a：拆除所有牆身上多餘 / 廢置 / 沒人認領之物件及鐵器 — $207,000)</em><br>
-                    👉 只要抬頭看看我們外牆，<strong>肉眼根本完全看不到有任何所謂「多餘或廢置鐵器」</strong>！顧問公司連要拆什麼都說不出來，憑空列一個項目就能收大家 20 多萬元？
-                </li>
-
-                <img src="quote_disposal.jpg" alt="徐偉杰報價單截圖：拆除鐵器工程" class="quote-img">
-            </ul>
-
-            <p style="margin-top: 15px;"><strong>💰 拿 MO 原本方案對比徐偉杰的「天價陪跑局」：</strong></p>
-            <img src="mo_ppt.jpg" alt="物業管理處大會 PPT 改善方案對比圖" class="ppt-img">
-
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li style="margin-bottom: 8px;"><strong>MO 原本方案一與二（免聘顧問，只需百多萬）：</strong> 管理處本週六會加回原本大會 PPT 的方案，處理滲漏個案<strong>估算費用僅需 $75 萬至 $175 萬（清洗每次約 $15萬-$39萬），而且完全無需聘請工程顧問公司</strong>！這證明真正需要修的地方極少，局部修復既高效又省錢！</li>
-                <li style="margin-bottom: 12px;"><strong>揭穿徐偉杰方案 1 的「陪跑陷阱」：</strong> 徐偉杰方案 1（$2,894 萬）故意做成「花近 3,000 萬卻連外牆都不清洗、不油漆」的極端方案，營造選方案 1 等於白花錢的錯覺，<strong>逼使大家只能被迫選擇費用更天價的徐偉杰方案 2（$4,770萬）或徐偉杰方案 3（$5,147萬）！</strong></li>
-            </ul>
-
-            <h3 style="margin-top: 15px; font-size: 1.05rem; color: #112d4e;">💰 徐偉杰方案費用與業主實質負擔對比：</h3>
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>顧問方案名稱</th>
-                        <th>總工程費用</th>
-                        <th>扣資助後全屋苑自負額</th>
-                        <th>業主平均分攤</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>徐偉杰 方案 1</strong></td>
-                        <td>$2,894 萬</td>
-                        <td>約 $2,100 萬</td>
-                        <td>約 5 萬 (根本不會選)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>徐偉杰 方案 2</strong></td>
-                        <td>$4,770 萬</td>
-                        <td>約 $3,900 萬</td>
-                        <td class="highlight">約 9 萬</td>
-                    </tr>
-                    <tr>
-                        <td><strong>徐偉杰 方案 3</strong></td>
-                        <td>$5,147 萬</td>
-                        <td>約 $4,300 萬</td>
-                        <td class="highlight">約 10 萬</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p style="font-size: 0.85rem; color: #666;">* 信和資助 1,000 萬扣除獨立屋分賬與顧問費後，實際剩餘可用 Funding 僅剩約 800 萬。</p>
-
-            <ul style="margin-left: 20px; margin-top: 12px;">
-                <li style="margin-bottom: 8px;"><strong>天價費用去咗邊？</strong> 徐偉杰方案中光是「棚架工程 ($1,267 萬)」加「保險與雜項 ($214 萬)」，就白白吞掉 <strong>$1,482 萬</strong>（佔總價逾 51%）！而真正的外牆結構修補費（石矢+批盪+飾面）加起來<strong>只有約 318 萬</strong>！</li>
-                <li style="margin-bottom: 8px;"><strong>⚠️ 致命風險：這還只是初步報價！</strong> 按照徐偉杰方案 2 與 3，每戶初步已經要夾 <strong>約 8 萬至 10 萬元</strong>！這還完全未計算工程展開後、做到一半又以各種藉口「天價追加撥款 / 逼業主再加錢」的無底洞風險！</li>
-                <li><strong>慘痛前車之鑑——宏福苑由 1.5 億飆升至 3.3 億：</strong> 宏福苑當年大維修<strong>中標報價原本只需 1.52 億元</strong>，開工後卻被各種理由不斷加價修改方案，<strong>最終天價索價高達 3.3 億元，足足翻了一倍多</strong>！今天說夾 8-10 萬，明天隨時被逼追加夾 15-20 萬！</li>
-            </ul>
-
-            <div class="pdf-link-box">
-                📄 <strong>【有圖有真相】親自查看工程估價單明細 PDF：</strong><br>
-                <a href="https://drive.google.com/file/d/1ay8J7dG-Myw5RgGYlTmW2-gLx0sQJNNz/view?usp=drivesdk" class="pdf-link-btn" target="_blank">點此打開 Google Drive 官方估價單</a>
+            <h3>🔍 公開資料：顧問公司股權結構與關連網絡</h3>
+            <div class="card-summary">
+                根據獨立媒體《誌》之公開公司註冊紀錄調查，「徐偉杰建築師有限公司」之股權背景及關連公司網路已獲公開報導。
             </div>
+            <details>
+                <summary>🔍 點擊查看：公開新聞調查摘要</summary>
+                <div class="details-content">
+                    <p>根據媒體《誌》發佈之公司註冊紀錄（2006年成立），「徐偉杰建築師有限公司」由陳响發之女兒陳嘉威直接持有 100% 股權，其關連網絡包括瑋業發展及鴻毅建築等。</p>
+                    <p style="margin-top:8px;">全體業主有權知悉相關公司之公開股權結構，並謹慎評估顧問公司之獨立性及工程預算合理性。</p>
+                    <a href="investigation.html" class="btn-subpage">➡️ 進入專頁：查看完整新聞調查圖表 ➔</a>
+                </div>
+            </details>
         </div>
 
-        <div class="card" style="border-left: 5px solid #2a5298; background-color: #f4f8ff;">
-            <h2>🏛️ 3. 【官方政策印證】政府修條例大幅提高親自投票門檻！如此重大工程，何不等待新法例落實再議？</h2>
-            <p>大家必須高度警惕！政府已正式展開為期一個月的公眾諮詢，針對《建築物管理條例》（第344章）提出重大修訂建議。<strong>新修訂將按工程金額實施「三級制」，大幅提高大型維修工程的業主出席及「親自投票」門檻</strong>：</p>
-            
-            <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                <li style="margin-bottom: 8px;">
-                    <strong>門檻大幅提高（阻止盲目通過）：</strong> 現行舊條例只需 10% 業主出席會議、5% 授權票或親自投票即可輕易通過天價大維修。而根據最新建議，平均每戶承擔 12 萬元的最高級別工程，<strong>必須有至少 20% 業主出席，且必須有 10% 或 200 名業主親身投票</strong>！
-                </li>
-                <li style="margin-bottom: 8px;">
-                    <strong>以天賦海灣1期為例：</strong> 若按照新修訂的 20% 親自出席與 10% 親自投票要求，<strong>屋苑必須要有至少 95 個業主親自到場出席投票</strong>！這意味著單靠少數神秘授權票盲目通過天價工程的時代將告終結！
-                </li>
-                <li>
-                    <strong>理性訴求——耐心等待新法落實再議：</strong> 如果日後屋苑真的有必要推行數千萬元的大大型維修工程，我們<strong>更應該等到政府這套全新監管法例正式落實實施後</strong>，在更透明、門檻更高、保障更完善的法規下才進行審議與表決！天賦海灣樓齡僅十幾年、外牆缺損更只有 0.76%，我們完全沒有迫切性在舊條例漏洞下硬推！
-                </li>
-            </ul>
-
-            <div class="pdf-link-box" style="background: white; border-style: solid;">
-                📰 <strong>【HK01 官方新聞報道】</strong><br>
-                <a href="https://www.hk01.com/article/60379379?utm_source=01articlecopy&utm_medium=referral" class="pdf-link-btn" target="_blank">點此閱讀 HK01：政府修訂《建築物管理條例》引入三級制門檻新聞詳情 ➔</a>
-            </div>
-        </div>
-
-        <div class="card" style="border-left: 5px solid #3f72af;">
-            <h2>💡 破除迷思：「外牆重刷樓價就會爆升？」睇睇大埔真實案例！</h2>
-            <p>有部分業主以為重刷外牆美化後，樓價就會大幅升值，這完全是美麗的誤會。我們拿大埔區的真實例子與數據說話：</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li style="margin-bottom: 8px;"><strong>大埔海寶花園（歷經圍標爭議，樓價未見升值）：</strong> 曾因大判追薪及涉嫌圍標風波備受關注。大維修工程主要在於解決樓宇老化問題而非推高投資回報，工程完成後成交呎價跟隨大市調整（現時平均實用呎價約在 $11,000 至 $11,500 水平），<strong>並未直接帶來顯著的樓價「升值」</strong>。</li>
-                <li style="margin-bottom: 8px;"><strong>大埔新興花園（拆棚後造價平穩，僅具保值功能）：</strong> 大維修及拆除外牆棚網後，近期成交造價表現平穩（折合實用呎價約在 $10,000 水平）。整體屋苑僅屬長遠改善外觀與結構安全而發揮「保值」作用，<strong>絕無出現顯著的爆發性升值</strong>。</li>
-                <li><strong>天賦海灣樓齡僅十幾年，根本無迫切性：</strong> 反觀天賦海灣<strong>樓齡僅十幾年，外牆缺損更只有 0.76%</strong>！夾幾千萬元去搭大棚重刷外牆，既換不到樓價爆升，反而要承受圍標爛尾與工程追加撥款的巨大風險！</li>
-            </ul>
-        </div>
-
-        <div class="dark-box">
-            <h2>⚠️ 極度黑暗：招標工程公司深涉宏福苑圍標網絡，運作極度黑幕！</h2>
-            <p>本次參與我們天賦海灣大維修招標的工程公司/顧問，背後網絡被揭發與廉政公署及競委會立案調查的「宏福苑大維修圍標集團」有著千絲萬縷的黑暗勾結！該網絡運作圍標手段極度黑暗，操控影子公司合謀定價、過度估價及故意拖延工程，一旦讓其染指天賦海灣數千萬元工程，全體業主隨時陷入工程爛尾與天價追加撥款的噩夢！</p>
-            
-            <a href="investigation.html" class="btn-link-out">⚠️ 點此開啟專頁：查看工程公司黑暗圍標背景與新聞紀錄 →</a>
-        </div>
-
+        <!-- 🚀 痛點卡片 4：理性替代方案 -->
         <div class="card">
-            <h2>⚠️ 長期搭棚等於住在建築工地，全體業主集體受罪！</h2>
-            
-            <div class="pain-points">
-                <div class="pain-card">
-                    <h3>🚧 治安與私隱</h3>
-                    <p>爬棚盜竊風險大增！全屋被迫長年閉窗拉簾，毫無私隱可言。</p>
-                </div>
-                <div class="pain-card">
-                    <h3>🔥 消防隱患</h3>
-                    <p>圍網與竹棚極易引發火警，對高低層業主皆是巨大安全威脅。</p>
-                </div>
-                <div class="pain-card">
-                    <h3>😷 居住受罪</h3>
-                    <p>整年不見天日！拆冷氣機架、施工粉塵噪音隨處飄散、衛生惡劣。</p>
-                </div>
-                <div class="pain-card">
-                    <h3>🏚️ 賣不出、租不出</h3>
-                    <p>二手成交即時冰封！買家與租客見圍網即打退堂鼓，物業租值暴跌。</p>
-                </div>
+            <h3>🚀 替代方案：科技清洗與局部修補</h3>
+            <div class="card-summary">
+                參考其他大型屋苑（如都會駅）經驗，採用「無人機高空清洗及檢測」，無需搭建全屋大棚，費用大幅降低 90%，且完全不影響冷氣使用與業主私隱。
             </div>
-        </div>
-
-        <div class="card" style="background-color: #fff9f9; border: 2px solid var(--primary);">
-            <h2 style="color: var(--primary); border-bottom-color: var(--primary);">🛑 我們的立場：三個徐偉杰方案，全數否決！</h2>
-            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">天賦海灣沒有法團，大維修做不做完全掌握在我們業主手上的投票權！三個徐偉杰方案全部都不合理，請全體業主投【反對票】！</p>
-            <p>只有全數否決這三個不合理方案，才能逼使物業管理處 (MO) 採用原本無需顧問、只需百多萬的方案，或者提出真正合理、省錢、高效的「按需局部修復」方案！</p>
-        </div>
-
-        <div class="card">
-            <h2>🗳️ 告急！時間緊迫，每一位業主的投票都至關重要！</h2>
-            <p>這是關乎我們每一戶數萬至數十萬元血汗錢、以及未來幾年居住質素的關鍵時刻！我們必須集合全體業主的力量，集結足夠的反對票與業權份數，才能成功守住我們的家園！</p>
-
-            <div class="action-box">
-                <strong>業主現在需要做的事：</strong>
-                <ol style="margin-left: 20px; margin-top: 8px;">
-                    <li><strong>發送動議 Email 給 MO：</strong> 立即點擊頂部紅色按鈕，一人一信要求 MO 在表決票加入「反對現階段大維修」選項！</li>
-                    <li><strong>親身出席大會（暫定 9月5日）：</strong> 請密切留意管理處正式發出的 EGM 日期通知，親自到場投下【全反對票】。</li>
-                    <li><strong>簽署反對授權票：</strong> 若當天無法出席，<strong>切勿交空白授權書給管理處或業委會成員</strong>！待正式授權書發出後，會第一時間在此提供下載連結。</li>
-                    <li><strong>主動通知鄰居：</strong> 請把這個網頁傳給身邊的天賦海灣業主鄰居，呼籲大家一同站出來保護自己的財產！</li>
-                </ol>
-            </div>
-
-            <div class="pdf-link-box" style="margin-top: 20px; background-color: #fff8e1; border-color: #ffa000;">
-                📥 <strong>【未能出席業主必備】下載 EGM 指定反對授權書：</strong><br>
-                <a href="#" class="pdf-link-btn" style="background-color: #ffa000;" target="_blank">📥 授權書待管理處發出後即時更新（持續跟進中）</a>
-            </div>
-        </div>
-
-        <div class="card" style="background-color: #f0f7ff; border: 2px solid #3f72af;">
-            <h2 style="color: #112d4e;">💬 業主心聲與理性建議：聚焦基本功，引進新科技！</h2>
-            
-            <h3 style="font-size: 1.05rem; color: var(--primary); margin-top: 10px; margin-bottom: 5px;">⚠️ 物管執行力已捉襟見肘，切勿勞民傷財偏離正軌！</h3>
-            <p>很多業主鄰居切身指出目前屋苑面臨的真實管理困局，值得全體業主深思：</p>
-            <ul style="margin-left: 20px; margin-top: 5px; margin-bottom: 15px;">
-                <li style="margin-bottom: 6px;"><strong>物管 MO 應先做好基本功：</strong> 屋苑樓齡邁入十幾年，各種公共設備保養已進入高峰期，財務壓力漸增。物管處現時連日常管理保養都已應付得極為吃力，若再分心去搞動輒幾千萬的天價大工程，屋苑日常管理肯定會進一步惡化！</li>
-                <li style="margin-bottom: 6px;"><strong>爛尾工程尚未收拾：</strong> 例如急需物管抓緊時間重新展開的<strong>「EV 電動車充電樁工程」</strong>至今仍擺爛未成！舊患未解決，何以再開新大棚？</li>
-                <li><strong>輕重緩急完全倒置：</strong> 全屋苑外牆缺損僅 0.76%，完全不具迫切性。才十幾年樓齡就急於全屋苑長期搭大棚折騰，不僅貽笑大方，更是勞民傷財！外牆的事來日方長，絕不急於這一兩年非做不可。</li>
-            </ul>
-
-            <h3 style="font-size: 1.05rem; color: #2a5298; margin-top: 10px; margin-bottom: 5px;">🚀 替代方案：引進「無人機高空清洗」，省錢、高效又安全！</h3>
-            <p>如果業主們希望美化屋苑外觀或進行定期清潔，我們<strong>根本不需要花費幾千萬元去搭大棚</strong>！</p>
-            <ul style="margin-left: 20px; margin-top: 5px;">
-                <li style="margin-bottom: 6px;"><strong>大型屋苑已有先例：</strong> 香港大型指標屋苑（如將軍澳<strong>都會駅 Metro Town</strong> 等）早已成功引進並採用<strong>「無人機高空清洗外牆」</strong>新科技（<a href="https://www.instagram.com/reel/DYzVRh0AWWE/" target="_blank" style="color: #3f72af; font-weight: bold;">點此觀看都會駅無人機洗外牆影片 ➔</a>）！</li>
-                <li style="margin-bottom: 6px;"><strong>技術優勢顯著：</strong> 無人機高壓噴洗成本極低廉、施工期極短、無需搭棚圍網，完全不影響業主採光、治安與私隱。</li>
-                <li><strong>建設性訴求：</strong> 我們應要求管理處與業委會積極考慮此類真正高科技、低成本的方案，把精神與資源留下來處理屋苑真正急切的設施設備維護！</li>
-            </ul>
-        </div>
-
-        <div class="counter-footer-box">
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 5px;">👀 本站累積業主瀏覽次數：</p>
-            <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgreenly21.github.io%2Fsaveprovidencebay1%2F&label=Views&icon=binoculars-fill&color=%23198754&message=&style=flat&tz=UTC" alt="Views Counter">
         </div>
 
     </div>
 
-    <div class="sticky-footer">
-        <a href="https://wa.me/?text=🚨%20天賦海灣1期業主注意！OC主席竟想擅自封殺平價方案？請立即一人一信發給MO要求加入反對選項！詳情：%20" class="btn btn-whatsapp" target="_blank">轉發 WhatsApp</a>
-        <a href="#" class="btn btn-proxy" target="_blank">📥 授權書跟進中</a>
-        <a href="https://drive.google.com/file/d/1ay8J7dG-Myw5RgGYlTmW2-gLx0sQJNNz/view?usp=drivesdk" class="btn btn-danger" target="_blank">估價單 PDF</a>
+    <!-- 頁尾 -->
+    <div class="footer">
+        <p>天賦海灣1期業主自發關心小組製作 | 僅供屋苑業主內部交流與權益參考</p>
     </div>
 
-    <script>
-        const targetDate = new Date("2026-09-05T20:00:00").getTime();
-
-        function updateTimer() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-
-                document.getElementById("mini-timer").innerText = `${days}天 ${hours}小時 ${minutes}分 ${seconds}秒`;
-            } else {
-                document.getElementById("mini-timer").innerText = "EGM 投票日進行中 / 待更新";
-                document.querySelector(".hero-countdown-card h3").innerText = "🚨 EGM 投票進行中 / 已完結";
-            }
-        }
-
-        updateTimer();
-        setInterval(updateTimer, 1000);
-    </script>
-  
+    <!-- 不蒜子人次計數器 JS -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
